@@ -1,0 +1,4 @@
+This test pulled from ravenna_pass_thru, mainly to get the SPI
+byte read/write routines.  There is no pass-thru mode on striVe,
+and the testbench needs to be rewritten to do some simple reads
+and writes to/from the housekeeping SPI on striVe.

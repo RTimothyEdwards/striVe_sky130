@@ -1,0 +1,85 @@
+VERSION 5.3 ;
+   NAMESCASESENSITIVE ON ;
+   NOWIREEXTENSIONATPIN ON ;
+   DIVIDERCHAR "/" ;
+   BUSBITCHARS "[]" ;
+UNITS
+   DATABASE MICRONS 1000 ;
+END UNITS
+
+MACRO striVe_clkrst
+   CLASS BLOCK ;
+   FOREIGN striVe_clkrst ;
+   ORIGIN -0.0000 -0.0000 ;
+   SIZE 22.7150 BY 22.7150 ;
+   PIN ext_clk_sel
+      DIRECTION INPUT ;
+      PORT
+         LAYER met2 ;
+	    RECT 15.7500 20.5950 16.3100 22.7150 ;
+      END
+   END ext_clk_sel
+   PIN ext_clk
+      DIRECTION INPUT ;
+      PORT
+         LAYER met2 ;
+	    RECT 1.9500 0.0000 2.5100 2.1200 ;
+      END
+   END ext_clk
+   PIN pll_clk
+      DIRECTION INPUT ;
+      PORT
+         LAYER met3 ;
+	    RECT 0.0000 13.9800 2.2000 15.1800 ;
+      END
+   END pll_clk
+   PIN reset
+      DIRECTION INPUT ;
+      PORT
+         LAYER met2 ;
+	    RECT 11.1500 0.0000 11.7100 2.1200 ;
+      END
+   END reset
+   PIN ext_reset
+      DIRECTION INPUT ;
+      PORT
+         LAYER met2 ;
+	    RECT 6.5500 20.5950 7.1100 22.7150 ;
+      END
+   END ext_reset
+   PIN clk
+      DIRECTION OUTPUT TRISTATE ;
+      PORT
+         LAYER met2 ;
+	    RECT 20.3500 0.0000 20.9100 2.1200 ;
+      END
+   END clk
+   PIN resetn
+      DIRECTION OUTPUT TRISTATE ;
+      PORT
+         LAYER met3 ;
+	    RECT 20.5150 13.9800 22.7150 15.1800 ;
+      END
+   END resetn
+   OBS
+         LAYER li1 ;
+	    RECT 2.0000 1.9150 20.4000 18.4050 ;
+         LAYER met1 ;
+	    RECT 2.0000 1.7600 20.7900 18.5600 ;
+         LAYER met2 ;
+	    RECT 2.1000 20.4550 6.4100 20.5950 ;
+	    RECT 7.2500 20.4550 15.6100 20.5950 ;
+	    RECT 16.4500 20.4550 20.7700 20.5950 ;
+	    RECT 2.1000 2.2600 20.7700 20.4550 ;
+	    RECT 2.6500 1.7600 11.0100 2.2600 ;
+	    RECT 11.8500 1.7600 20.2100 2.2600 ;
+         LAYER met3 ;
+	    RECT 2.2000 15.4800 20.5150 18.5600 ;
+	    RECT 2.5000 13.6800 20.2150 15.4800 ;
+	    RECT 2.2000 1.7600 20.5150 13.6800 ;
+         LAYER met4 ;
+	    RECT 5.2000 1.7600 14.3000 18.5600 ;
+         LAYER met5 ;
+	    RECT 2.0000 5.2000 20.4000 14.3000 ;
+   END
+END striVe_clkrst

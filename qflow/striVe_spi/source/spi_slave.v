@@ -1,0 +1,1 @@
+../../../verilog/source/spi_slave.v

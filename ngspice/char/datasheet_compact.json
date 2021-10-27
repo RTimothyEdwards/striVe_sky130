@@ -1,0 +1,765 @@
+{
+    "data-sheet": {
+        "foundry": "SW",
+        "global-conditions": [
+            {
+                "display": "VDD3V3",
+                "condition": "VOLTAGE:VDD3V3",
+                "typ": "3.3",
+                "unit": "V"
+            },
+            {
+                "display": "VDD1V8",
+                "condition": "VOLTAGE:VDD1V8",
+                "typ": "1.8",
+                "unit": "V"
+            },
+            {
+                "display": "Ground",
+                "condition": "VOLTAGE:VSS",
+                "typ": "0",
+                "unit": "V"
+            },
+            {
+                "display": "RLoad",
+                "condition": "RESISTANCE:X",
+                "typ": "100",
+                "unit": "M\u03a9"
+            },
+            {
+                "display": "CLoad",
+                "condition": "CAPACITANCE:X",
+                "max": "1",
+                "unit": "pF"
+            },
+            {
+                "display": "Temp",
+                "max": "85",
+                "unit": "\u00b0C",
+                "condition": "TEMPERATURE",
+                "typ": "27",
+                "min": "-40"
+            },
+            {
+                "condition": "SIGMA",
+                "typ": "3",
+                "display": "Sigma"
+            },
+            {
+                "condition": "CORNER",
+                "max": "ff",
+                "typ": "tt",
+                "min": "ss",
+                "display": "Corner"
+            }
+        ],
+        "description": "Digital level shifter between a 1.8V domain and a 3.3V domain.",
+        "physical-params": [
+            {
+                "display": "Device area",
+                "condition": "device_area",
+                "max": {
+                    "penalty": "fail",
+                    "target": "115"
+                },
+                "unit": "\u00b5m\u00b2"
+            },
+            {
+                "display": "Layout area",
+                "condition": "area",
+                "max": {
+                    "penalty": "fail",
+                    "target": "60"
+                },
+                "unit": "\u00b5m\u00b2"
+            },
+            {
+                "display": "Layout width",
+                "condition": "width",
+                "max": {
+                    "penalty": "fail",
+                    "target": "10"
+                },
+                "unit": "\u00b5m"
+            },
+            {
+                "display": "Layout height",
+                "condition": "height",
+                "max": {
+                    "penalty": "fail",
+                    "target": "6"
+                },
+                "unit": "\u00b5m"
+            },
+            {
+                "condition": "LVS_errors",
+                "max": {
+                    "score": "fail",
+                    "value": "19",
+                    "penalty": "fail",
+                    "target": "0"
+                },
+                "display": "LVS errors"
+            },
+            {
+                "condition": "DRC_errors",
+                "max": {
+                    "penalty": "fail",
+                    "target": "0"
+                },
+                "display": "DRC errors"
+            }
+        ],
+        "ip-name": "lvlshift",
+        "netlist-source": "schematic",
+        "score": "0",
+        "node": "EFS8A",
+        "electrical-params": [
+            {
+                "display": "VOL",
+                "max": {
+                    "score": "pass",
+                    "value": "1.109e-07",
+                    "penalty": "fail",
+                    "target": "0.1"
+                },
+                "method": "VOLTAGE_OUTPUT",
+                "unit": "V",
+                "min": {
+                    "value": "5.712e-09",
+                    "penalty": "0"
+                },
+                "typ": {
+                    "value": "2.043e-08",
+                    "penalty": "0"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "IN",
+                        "condition": "VOLTAGE:A",
+                        "typ": "0.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "typ": "27",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "3",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "VOH",
+                "max": {
+                    "value": "3.3",
+                    "penalty": "0"
+                },
+                "method": "VOLTAGE_OUTPUT",
+                "unit": "V",
+                "min": {
+                    "score": "pass",
+                    "value": "3.3",
+                    "penalty": "fail",
+                    "target": "3.2"
+                },
+                "typ": {
+                    "value": "3.3",
+                    "penalty": "0"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "IN",
+                        "condition": "VOLTAGE:A",
+                        "typ": "1.5",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "typ": "27",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "3",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "TPD rise @ 3\u03c3",
+                "max": {
+                    "score": "fail",
+                    "value": "127.1",
+                    "penalty": "fail",
+                    "target": "3"
+                },
+                "method": "PROPRISE",
+                "unit": "ns",
+                "min": {
+                    "score": "0",
+                    "value": "-500",
+                    "penalty": "0",
+                    "target": "1"
+                },
+                "typ": {
+                    "score": "1711",
+                    "value": "-32.21",
+                    "penalty": "50",
+                    "target": "2"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "linstep": "20",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "3",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "TPD rise @ 6\u03c3",
+                "max": {
+                    "score": "fail",
+                    "value": "127.1",
+                    "penalty": "fail",
+                    "target": "3"
+                },
+                "method": "PROPRISE",
+                "unit": "ns",
+                "min": {
+                    "score": "0",
+                    "value": "-500",
+                    "penalty": "0",
+                    "target": "1"
+                },
+                "typ": {
+                    "score": "1711",
+                    "value": "-32.21",
+                    "penalty": "50",
+                    "target": "2"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "linstep": "20",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "6",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "TPD fall @ 3\u03c3",
+                "max": {
+                    "score": "fail",
+                    "value": "230.2",
+                    "penalty": "fail",
+                    "target": "3"
+                },
+                "method": "PROPFALL",
+                "unit": "ns",
+                "min": {
+                    "score": "0",
+                    "value": "1.486",
+                    "penalty": "0",
+                    "target": "1"
+                },
+                "typ": {
+                    "score": "571.7",
+                    "value": "13.43",
+                    "penalty": "50",
+                    "target": "2"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "linstep": "20",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "3",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "TPD fall @ 6\u03c3",
+                "max": {
+                    "score": "fail",
+                    "value": "230.2",
+                    "penalty": "fail",
+                    "target": "3"
+                },
+                "method": "PROPFALL",
+                "unit": "ns",
+                "min": {
+                    "score": "0",
+                    "value": "1.486",
+                    "penalty": "0",
+                    "target": "1"
+                },
+                "typ": {
+                    "score": "571.7",
+                    "value": "13.43",
+                    "penalty": "50",
+                    "target": "2"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Overdrive",
+                        "condition": "VOLTAGE:VDIFF",
+                        "typ": "-0.5",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "linstep": "20",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "6",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "IDD (leakage)",
+                "max": {
+                    "score": "pass",
+                    "value": "138.4",
+                    "penalty": "fail",
+                    "target": "250"
+                },
+                "method": "DCCURRENT_STATIC",
+                "unit": "pA",
+                "min": {
+                    "value": "21.62",
+                    "penalty": "0"
+                },
+                "typ": {
+                    "score": "6842",
+                    "value": "31.58",
+                    "penalty": "100",
+                    "target": "100"
+                },
+                "conditions": [
+                    {
+                        "display": "VDD3V3",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "typ": "3.3",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "IN",
+                        "condition": "VOLTAGE:A",
+                        "max": "1.8",
+                        "min": "0.0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "typ": "27",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "max": "ff",
+                        "typ": "tt",
+                        "min": "ss",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "3",
+                        "display": "Sigma"
+                    }
+                ]
+            },
+            {
+                "display": "Propagation delay vs. supply voltage VDD3V3",
+                "plot": {
+                    "ylabel": "Propagation delay",
+                    "xaxis": "VOLTAGE:VDD3V3",
+                    "status": "done",
+                    "filename": "TPDxVDD3V3.png",
+                    "xlabel": "Supply voltage VDD3V3"
+                },
+                "method": "PROPRISE",
+                "unit": "ns",
+                "conditions": [
+                    {
+                        "display": "VDD1V8",
+                        "condition": "VOLTAGE:VDD1V8",
+                        "typ": "1.8",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "Ground",
+                        "condition": "VOLTAGE:VSS",
+                        "typ": "0",
+                        "unit": "V"
+                    },
+                    {
+                        "display": "VDD3V3",
+                        "max": "3.6",
+                        "unit": "V",
+                        "condition": "VOLTAGE:VDD3V3",
+                        "linstep": "0.1",
+                        "min": "2.5"
+                    },
+                    {
+                        "display": "RLoad",
+                        "condition": "RESISTANCE:X",
+                        "typ": "100",
+                        "unit": "M\u03a9"
+                    },
+                    {
+                        "display": "CLoad",
+                        "condition": "CAPACITANCE:X",
+                        "max": "1",
+                        "unit": "pF"
+                    },
+                    {
+                        "display": "Temp",
+                        "max": "85",
+                        "unit": "\u00b0C",
+                        "condition": "TEMPERATURE",
+                        "typ": "27",
+                        "min": "-40"
+                    },
+                    {
+                        "condition": "CORNER",
+                        "typ": "tt",
+                        "display": "Corner"
+                    },
+                    {
+                        "condition": "SIGMA",
+                        "typ": "3",
+                        "display": "Sigma"
+                    }
+                ]
+            }
+        ],
+        "pins": [
+            {
+                "description": "Low-voltage input",
+                "Vmax": "VDD1V8 + 0.3",
+                "type": "signal",
+                "name": "A",
+                "dir": "input",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "High-voltage output",
+                "Vmax": "VDD3V3 + 0.3",
+                "type": "signal",
+                "name": "X",
+                "dir": "output",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "High-voltage supply",
+                "Vmax": "+3.6",
+                "type": "power",
+                "name": "VDD3V3",
+                "dir": "inout",
+                "Vmin": "+3.0"
+            },
+            {
+                "description": "Low-voltage supply",
+                "Vmax": "+2.1",
+                "type": "power",
+                "name": "VDD1V8",
+                "dir": "inout",
+                "Vmin": "+1.5"
+            },
+            {
+                "dir": "inout",
+                "description": "Common ground",
+                "type": "ground",
+                "name": "VSS"
+            }
+        ],
+        "format": "3"
+    }
+}
